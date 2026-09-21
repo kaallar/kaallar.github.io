@@ -2,14 +2,13 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function Navbar() {
+function Navbar({ language, setLanguage }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -29,6 +28,14 @@ function Navbar() {
     });
 
     closeMenu();
+  };
+
+  const t = {
+    services: language === "es" ? "Servicios" : "Services",
+    plans: language === "es" ? "Planes" : "Plans",
+    warranty: language === "es" ? "Garantía" : "Warranty",
+    faq: language === "es" ? "FAQ" : "FAQ",
+    contact: language === "es" ? "Contacto" : "Contact",
   };
 
   return (
@@ -54,44 +61,104 @@ function Navbar() {
           </h1>
         </Link>
 
-        {/* Menú escritorio */}
-        <nav className="hidden items-center gap-8 md:flex">
-          <a
-            href="#servicios"
-            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
-          >
-            Servicios
-          </a>
+        {/* Desktop */}
+        <div className="hidden items-center gap-8 md:flex">
+          <nav className="flex items-center gap-8">
+            <a
+              href="#servicios"
+              className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+            >
+              {t.services}
+            </a>
 
-          <a
-            href="#planes"
-            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
-          >
-            Planes
-          </a>
+            <a
+              href="#planes"
+              className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+            >
+              {t.plans}
+            </a>
 
-          <a
-            href="#garantia"
-            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
-          >
-            Garantía
-          </a>
+            <a
+              href="#garantia"
+              className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+            >
+              {t.warranty}
+            </a>
 
-          <a
-            href="#contacto"
-            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
-          >
-            Contacto
-          </a>
-        </nav>
+            <a
+              href="#faq"
+              className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+            >
+              {t.faq}
+            </a>
 
-        {/* Botón móvil */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="rounded-full border border-white/10 p-2 text-white transition hover:border-[#C8A45D] md:hidden"
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
-        </button>
+            <a
+              href="#contacto"
+              className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+            >
+              {t.contact}
+            </a>
+          </nav>
+
+          {/* Idioma */}
+          <div className="flex rounded-full border border-white/10 bg-white/5 p-1">
+            <button
+              onClick={() => setLanguage("es")}
+              className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
+                language === "es"
+                  ? "bg-[#C8A45D] text-black"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              ES
+            </button>
+
+            <button
+              onClick={() => setLanguage("en")}
+              className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
+                language === "en"
+                  ? "bg-[#C8A45D] text-black"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              EN
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile */}
+        <div className="flex items-center gap-3 md:hidden">
+          <div className="flex rounded-full border border-white/10 bg-white/5 p-1">
+            <button
+              onClick={() => setLanguage("es")}
+              className={`rounded-full px-2 py-1 text-[10px] font-semibold ${
+                language === "es"
+                  ? "bg-[#C8A45D] text-black"
+                  : "text-neutral-400"
+              }`}
+            >
+              ES
+            </button>
+
+            <button
+              onClick={() => setLanguage("en")}
+              className={`rounded-full px-2 py-1 text-[10px] font-semibold ${
+                language === "en"
+                  ? "bg-[#C8A45D] text-black"
+                  : "text-neutral-400"
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
+          <button
+            onClick={() => setOpen(!open)}
+            className="rounded-full border border-white/10 p-2 text-white transition hover:border-[#C8A45D]"
+          >
+            {open ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
       </div>
 
       {/* Menú móvil */}
@@ -103,7 +170,7 @@ function Navbar() {
               onClick={closeMenu}
               className="text-base font-semibold text-neutral-200"
             >
-              Servicios
+              {t.services}
             </a>
 
             <a
@@ -111,7 +178,7 @@ function Navbar() {
               onClick={closeMenu}
               className="text-base font-semibold text-neutral-200"
             >
-              Planes
+              {t.plans}
             </a>
 
             <a
@@ -119,7 +186,15 @@ function Navbar() {
               onClick={closeMenu}
               className="text-base font-semibold text-neutral-200"
             >
-              Garantía
+              {t.warranty}
+            </a>
+
+            <a
+              href="#faq"
+              onClick={closeMenu}
+              className="text-base font-semibold text-neutral-200"
+            >
+              {t.faq}
             </a>
 
             <a
@@ -127,7 +202,7 @@ function Navbar() {
               onClick={closeMenu}
               className="text-base font-semibold text-neutral-200"
             >
-              Contacto
+              {t.contact}
             </a>
           </div>
         </div>

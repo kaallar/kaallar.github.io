@@ -1,10 +1,10 @@
 const business = {
   name: "kaallar",
-  phone: "50600000000",
-  phoneDisplay: "+506 0000-0000",
-  email: "hola@kaallar.com",
-  instagram: "@kaallar",
-  website: "www.kaallar.com",
+  phone: "506072261373",
+  phoneDisplay: "+506 7226-1373",
+  email: "kalleynear05@gmail.com",
+  instagram: "@kaallar_studio",
+  website: "https://kaallar.github.io/",
 };
 
 export default business;

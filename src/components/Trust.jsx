@@ -6,30 +6,69 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-const features = [
-  {
-    icon: Smartphone,
-    title: "100% Responsive",
-    text: "Perfecto en celular, tablet y computadora.",
-  },
-  {
-    icon: Zap,
-    title: "Alta Velocidad",
-    text: "Sitios optimizados para cargar en segundos.",
-  },
-  {
-    icon: Palette,
-    title: "Diseño Premium",
-    text: "Cada proyecto es único, sin plantillas genéricas.",
-  },
-  {
-    icon: MessageCircle,
-    title: "WhatsApp Integrado",
-    text: "Convierte visitantes en conversaciones reales.",
-  },
-];
+function Trust({ language = "es" }) {
+  const content = {
+    es: {
+      tag: "¿Por qué kaallar?",
+      title: "Diseñado para generar confianza desde el primer clic.",
+      description:
+        "Creamos experiencias digitales elegantes, rápidas y enfocadas en convertir visitantes en clientes para negocios de Costa Rica.",
+      features: [
+        {
+          icon: Smartphone,
+          title: "100% Responsive",
+          text: "Perfecto en celular, tablet y computadora.",
+        },
+        {
+          icon: Zap,
+          title: "Alta Velocidad",
+          text: "Sitios optimizados para cargar en segundos.",
+        },
+        {
+          icon: Palette,
+          title: "Diseño Premium",
+          text: "Cada proyecto es único, sin plantillas genéricas.",
+        },
+        {
+          icon: MessageCircle,
+          title: "WhatsApp Integrado",
+          text: "Convierte visitantes en conversaciones reales.",
+        },
+      ],
+    },
 
-function Trust() {
+    en: {
+      tag: "Why kaallar?",
+      title: "Designed to build trust from the very first click.",
+      description:
+        "We create elegant, fast and conversion-focused digital experiences for businesses across Costa Rica.",
+      features: [
+        {
+          icon: Smartphone,
+          title: "100% Responsive",
+          text: "Perfect on mobile, tablet and desktop.",
+        },
+        {
+          icon: Zap,
+          title: "High Performance",
+          text: "Optimized to load in just seconds.",
+        },
+        {
+          icon: Palette,
+          title: "Premium Design",
+          text: "Every project is unique, never based on generic templates.",
+        },
+        {
+          icon: MessageCircle,
+          title: "WhatsApp Integration",
+          text: "Turn visitors into real conversations.",
+        },
+      ],
+    },
+  };
+
+  const t = content[language];
+
   return (
     <section className="bg-[#111111] py-24 text-white">
       <div className="mx-auto max-w-7xl px-6">
@@ -38,25 +77,24 @@ function Trust() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rounded-[36px] border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 md:p-14 backdrop-blur-xl"
+          className="rounded-[36px] border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 backdrop-blur-xl md:p-14"
         >
           <div className="mb-14 text-center">
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#C8A45D]">
-              ¿Por qué kaallar?
+              {t.tag}
             </p>
 
             <h2 className="mb-6 text-4xl font-bold leading-tight md:text-5xl">
-              Diseñado para generar confianza desde el primer clic.
+              {t.title}
             </h2>
 
             <p className="mx-auto max-w-3xl text-lg leading-8 text-neutral-300">
-              Creamos experiencias digitales elegantes, rápidas y enfocadas en
-              convertir visitantes en clientes para negocios de Costa Rica.
+              {t.description}
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((item, index) => {
+            {t.features.map((item, index) => {
               const Icon = item.icon;
 
               return (

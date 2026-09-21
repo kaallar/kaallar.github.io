@@ -7,7 +7,6 @@ import ClinicaGallery from "../components/clinica/ClinicaGallery";
 import ClinicaTestimonials from "../components/clinica/ClinicaTestimonials";
 import ClinicaWhyUs from "../components/clinica/ClinicaWhyUs";
 import ClinicaHours from "../components/clinica/ClinicaHours";
-import ClinicaInstagram from "../components/clinica/ClinicaInstagram";
 import ClinicaFooter from "../components/clinica/ClinicaFooter";
 import WhatsAppFloat from "../components/clinica/WhatsAppFloat";
 import ClinicaTeam from "../components/clinica/ClinicaTeam";
@@ -25,7 +24,6 @@ function ClinicaDemo() {
       <ClinicaTestimonials />
       <ClinicaWhyUs />
       <ClinicaHours />
-      <ClinicaInstagram />
       <ClinicaFooter />
       <WhatsAppFloat />
     </>

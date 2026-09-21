@@ -1,21 +1,29 @@
 import {
-  AtSign,
-  MessageCircle,
   MapPin,
   Clock,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 function SalonFooter() {
   const phone = "50688888888";
 
   const message = encodeURIComponent(
-    "¡Hola! Me gustaría agendar una cita en Black Crown Barber Studio."
+    "¡Hola! Me gustaría agendar una cita."
   );
 
   const openLink = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
+
+  const whatsapp = `https://wa.me/${phone}?text=${message}`;
+  const instagram = "https://instagram.com/tuinstagram";
+  const facebook = "https://facebook.com/tufacebook";
+  const tiktok = "https://tiktok.com/@tutiktok";
 
   return (
     <footer className="bg-[#080808] text-white">
@@ -24,42 +32,33 @@ function SalonFooter() {
           {/* Marca */}
           <div>
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C8A45D]">
-              Black Crown
+              Tu Marca
             </p>
 
             <h2 className="mb-5 text-4xl font-bold">
-              Barber Studio
+              Barbería & Salón Premium
             </h2>
 
             <p className="max-w-md leading-8 text-neutral-400">
-              Una demostración desarrollada por kaallar para mostrar cómo podría
-              verse el sitio web de una barbería o salón premium.
+              Esta es una demostración desarrollada por kaallar para mostrar cómo
+              podría verse el sitio web de una barbería o salón moderno,
+              elegante y completamente personalizable.
             </p>
 
             <button
-              onClick={() =>
-                openLink(`https://wa.me/${phone}?text=${message}`)
-              }
-              className="mt-8 rounded-full bg-[#C8A45D] px-6 py-3 font-semibold text-black transition hover:scale-105"
+              onClick={() => openLink(whatsapp)}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#C8A45D] px-6 py-3 font-semibold text-black transition hover:scale-105"
             >
+              <FaWhatsapp size={18} />
               Agendar por WhatsApp
             </button>
-
-            <Link
-              to="/"
-              className="mt-6 block text-sm text-[#C8A45D] transition hover:translate-x-1"
-            >
-              ← Volver a kaallar
-            </Link>
           </div>
 
           {/* Contacto */}
           <div className="space-y-2">
             <button
               onClick={() =>
-                openLink(
-                  "https://maps.google.com/?q=San+José+Costa+Rica"
-                )
+                openLink("https://maps.google.com/?q=San+Jose+Costa+Rica")
               }
               className="flex w-full items-start gap-4 rounded-2xl p-4 text-left transition hover:bg-white/5"
             >
@@ -68,7 +67,7 @@ function SalonFooter() {
               <div>
                 <h3 className="font-semibold">Ubicación</h3>
                 <p className="text-neutral-400">
-                  San José Centro, Costa Rica
+                  San José, Costa Rica
                 </p>
               </div>
             </button>
@@ -88,7 +87,7 @@ function SalonFooter() {
               onClick={() => openLink(`https://wa.me/${phone}`)}
               className="flex w-full items-start gap-4 rounded-2xl p-4 text-left transition hover:bg-white/5"
             >
-              <MessageCircle
+              <FaWhatsapp
                 className="mt-1 text-[#C8A45D]"
                 size={20}
               />
@@ -101,26 +100,43 @@ function SalonFooter() {
               </div>
             </button>
 
-            <button
-              onClick={() =>
-                openLink("https://instagram.com/blackcrown.barber")
-              }
-              className="flex w-full items-start gap-4 rounded-2xl p-4 text-left transition hover:bg-white/5"
-            >
-              <AtSign className="mt-1 text-[#C8A45D]" size={20} />
+            {/* Redes sociales */}
+            <div className="rounded-2xl p-4">
+              <h3 className="mb-4 font-semibold">
+                Redes sociales
+              </h3>
 
-              <div>
-                <h3 className="font-semibold">Instagram</h3>
-                <p className="text-neutral-400">
-                  @blackcrown.barber
-                </p>
+              <div className="flex gap-4">
+                <button
+                  onClick={() => openLink(instagram)}
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-[#C8A45D] hover:text-[#C8A45D]"
+                >
+                  <FaInstagram size={20} />
+                </button>
+
+                <button
+                  onClick={() => openLink(facebook)}
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-[#C8A45D] hover:text-[#C8A45D]"
+                >
+                  <FaFacebookF size={18} />
+                </button>
+
+                <button
+                  onClick={() => openLink(tiktok)}
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-[#C8A45D] hover:text-[#C8A45D]"
+                >
+                  <FaTiktok size={19} />
+                </button>
               </div>
-            </button>
+            </div>
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-8 text-sm text-neutral-500">
-          © 2026 Black Crown Barber Studio · Demo creada por kaallar.
+        {/* Bottom */}
+        <div className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-neutral-500 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 Tu Marca · Demo creada por kaallar.</p>
+
+          <p>Diseño Web · Reservas · Experiencias Digitales</p>
         </div>
       </div>
     </footer>

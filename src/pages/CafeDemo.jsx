@@ -7,7 +7,6 @@ import CafeGallery from "../components/cafe/CafeGallery";
 import CafeTestimonials from "../components/cafe/CafeTestimonials";
 import CafeWhyUs from "../components/cafe/CafeWhyUs";
 import CafeHours from "../components/cafe/CafeHours";
-import CafeInstagram from "../components/cafe/CafeInstagram";
 import CafeFooter from "../components/cafe/CafeFooter";
 import WhatsAppFloat from "../components/cafe/WhatsAppFloat";
 
@@ -23,7 +22,6 @@ function CafeDemo() {
       <CafeTestimonials />
       <CafeWhyUs />
       <CafeHours />
-      <CafeInstagram />
       <CafeFooter />
       <WhatsAppFloat />
     </>

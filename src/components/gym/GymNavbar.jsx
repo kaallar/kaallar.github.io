@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function BufeteNavbar() {
+function GymNavbar() {
   const goTo = (id) => {
     const section = document.getElementById(id);
 
@@ -29,7 +29,7 @@ function BufeteNavbar() {
 
         {/* Logo */}
         <h1 className="text-xl font-semibold tracking-tight text-white">
-          Bufete Atlas
+          NEXUS Fitness Club
         </h1>
 
         {/* Navegación */}
@@ -44,10 +44,10 @@ function BufeteNavbar() {
 
           <button
             type="button"
-            onClick={() => goTo("areas")}
+            onClick={() => goTo("servicios")}
             className="bg-transparent transition duration-200 hover:text-[#C8A45D]"
           >
-            Áreas
+            Membresías
           </button>
 
           <button
@@ -71,4 +71,4 @@ function BufeteNavbar() {
   );
 }
 
-export default BufeteNavbar;
+export default GymNavbar;

@@ -2,23 +2,23 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Laura Hernández",
-    role: "Cliente de Derecho de Familia",
-    text: "Recibí un acompañamiento excepcional durante todo mi proceso. Siempre hubo comunicación clara y un trato muy humano.",
+    name: "Sofía Jiménez",
+    role: "Miembro desde 2024",
+    text: "El ambiente es increíble y los entrenadores realmente se preocupan por tu progreso. Es el mejor gimnasio en el que he estado.",
   },
   {
-    name: "Carlos Villalobos",
-    role: "Empresario",
-    text: "El equipo resolvió la constitución de mi empresa de forma rápida y profesional. Totalmente recomendados.",
+    name: "Carlos Mora",
+    role: "Entrenamiento personalizado",
+    text: "Mi plan de fuerza fue completamente adaptado a mis objetivos y los resultados comenzaron a notarse en pocas semanas.",
   },
   {
-    name: "Ana Gómez",
-    role: "Cliente de Derecho Civil",
-    text: "Destaco la transparencia y el compromiso del bufete. Me sentí respaldada desde la primera consulta hasta la resolución del caso.",
+    name: "Valentina Solís",
+    role: "Functional Training",
+    text: "Las instalaciones son impecables, las clases tienen mucha energía y siempre me siento motivada a volver.",
   },
 ];
 
-function BufeteTestimonials() {
+function GymTestimonials() {
   return (
     <section className="bg-[#111111] py-24 text-white">
       <div className="mx-auto max-w-7xl px-6">
@@ -28,12 +28,12 @@ function BufeteTestimonials() {
           </p>
 
           <h2 className="mb-4 text-5xl font-bold">
-            La confianza es nuestro mayor respaldo
+            Lo que dicen nuestros miembros
           </h2>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-neutral-400">
-            Cada caso representa una responsabilidad. Estas son algunas de las
-            experiencias compartidas por quienes confiaron en Bufete Atlas.
+            Cada entrenamiento está respaldado por un equipo profesional y una
+            comunidad que inspira a superarse todos los días.
           </p>
         </div>
 
@@ -69,4 +69,4 @@ function BufeteTestimonials() {
   );
 }
 
-export default BufeteTestimonials;
+export default GymTestimonials;

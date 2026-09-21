@@ -6,18 +6,22 @@ import Guarantee from "../components/Guarantee";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import Testimonials from "../components/Testimonials";
+import Process from "../components/Process";
+import FAQ from "../components/FAQ";
 
-function Home() {
+function Home({ language }) {
   return (
     <>
-      <Hero />
-      <Trust />
-      <Services />
-      <Gallery />
-      <Testimonials />
-      <Pricing />
-      <Guarantee />
-      <Footer />
+      <Hero language={language} />
+      <Trust language={language} />
+      <Services language={language} />
+      <Gallery language={language} />
+      <Process language={language} />
+      <Testimonials language={language} />
+      <Pricing language={language} />
+      <Guarantee language={language} />
+      <FAQ language={language} />
+      <Footer language={language} />
     </>
   );
 }

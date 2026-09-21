@@ -1,35 +1,35 @@
 import {
-  Scale,
   ShieldCheck,
-  Users,
-  Landmark,
+  Dumbbell,
+  Trophy,
+  HeartHandshake,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: Scale,
-    title: "Experiencia jurídica",
-    text: "Brindamos asesoría estratégica en diversas ramas del derecho con un enfoque personalizado.",
-  },
-  {
     icon: ShieldCheck,
-    title: "Confidencialidad absoluta",
-    text: "Cada consulta y cada proceso se maneja con total ética profesional y reserva.",
+    title: "Entrenamiento seguro",
+    text: "Protocolos, técnica correcta y acompañamiento profesional para entrenar con confianza.",
   },
   {
-    icon: Users,
-    title: "Atención cercana",
-    text: "Acompañamos a nuestros clientes durante todo el proceso con comunicación clara y constante.",
+    icon: Dumbbell,
+    title: "Equipamiento premium",
+    text: "Máquinas de última generación y zonas especializadas para fuerza, cardio y entrenamiento funcional.",
   },
   {
-    icon: Landmark,
-    title: "Soluciones para empresas",
-    text: "Asesoramos tanto a personas como a compañías en la toma de decisiones legales importantes.",
+    icon: Trophy,
+    title: "Resultados medibles",
+    text: "Planes personalizados y seguimiento continuo para ayudarte a progresar de forma constante.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Comunidad que motiva",
+    text: "Más que un gimnasio, un espacio donde entrenadores y miembros impulsan tu mejor versión.",
   },
 ];
 
-function BufeteWhyUs() {
+function GymWhyUs() {
   return (
     <section className="bg-[#F7F4EE] py-24 text-black">
       <div className="mx-auto max-w-7xl px-6">
@@ -39,12 +39,13 @@ function BufeteWhyUs() {
           </p>
 
           <h2 className="mb-4 text-5xl font-bold">
-            Defensa legal con confianza y excelencia
+            Entrena en un entorno diseñado para progresar
           </h2>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-neutral-600">
-            En Bufete Atlas creemos que una buena representación comienza con la
-            confianza, la transparencia y el compromiso con cada cliente.
+            En NEXUS Fitness Club combinamos tecnología, entrenamiento
+            personalizado y una comunidad que inspira para ofrecer una experiencia
+            fitness de alto nivel.
           </p>
         </div>
 
@@ -81,4 +82,4 @@ function BufeteWhyUs() {
   );
 }
 
-export default BufeteWhyUs;
+export default GymWhyUs;

@@ -4,101 +4,151 @@ import { ArrowUpRight } from "lucide-react";
 
 import cafe from "../assets/images/cafe.jpg";
 import clinica from "../assets/images/clinica.jpg";
-import bufete from "../assets/images/bufete.jpg";
 import salon from "../assets/images/salon.jpg";
 import tienda from "../assets/images/tienda.jpg";
+import gym from "../assets/images/gym.jpg";
 
-const projects = [
-  {
-    title: "Café Luna",
-    category: "Cafetería Premium",
-    image: cafe,
-    path: "/cafe",
-    available: true,
-  },
-  {
-    title: "Clínica Dulce Nombre",
-    category: "Clínica Dental",
-    image: clinica,
-    path: "/clinica",
-    available: true,
-  },
-  {
-    title: "Bufete Atlas",
-    category: "Bufete Jurídico",
-    image: bufete,
-    path: "/bufete",
-    available: true,
-  },
-  {
-    title: "Studio Noir",
-    category: "Salón & Barbería",
-    image: salon,
-    path: "/salon",
-    available: true,
-  },
-  {
-    title: "Flamingo Store",
-    category: "Tienda Online",
-    image: tienda,
-    path: "/tienda",
-    available: true,
-  },
-];
+function Gallery({ language = "es" }) {
+  const content = {
+    es: {
+      tag: "Portafolio",
+      title: "Proyectos diseñados para vender.",
+      description:
+        "Estos proyectos muestran el nivel de diseño que desarrolla kaallar. Cada sitio puede adaptarse completamente a tu negocio, identidad visual y necesidades.",
+      explore: "Explorar proyecto",
+      projects: [
+        {
+          title: "Restaurantes y cafeterías",
+          category: "Landing & multipágina",
+          image: cafe,
+          path: "/cafe",
+        },
+        {
+          title: "Clínicas",
+          category: "Sitio corporativo",
+          image: clinica,
+          path: "/clinica",
+        },
+        {
+          title: "Barberías y salones",
+          category: "Reservas & servicios",
+          image: salon,
+          path: "/salon",
+        },
+        {
+          title: "Comercios y tiendas",
+          category: "E-commerce",
+          image: tienda,
+          path: "/tienda",
+        },
+        {
+          title: "Gimnasios",
+          category: "Membresías & clases",
+          image: gym,
+          path: "/gym",
+        },
+      ],
+    },
 
-function Gallery() {
+    en: {
+      tag: "Portfolio",
+      title: "Projects designed to sell.",
+      description:
+        "These projects showcase the design quality developed by kaallar. Every website can be fully adapted to your business, branding and specific needs.",
+      explore: "Explore project",
+      projects: [
+        {
+          title: "Restaurants & Cafés",
+          category: "Landing & Multi-page",
+          image: cafe,
+          path: "/cafe",
+        },
+        {
+          title: "Clinics",
+          category: "Corporate Website",
+          image: clinica,
+          path: "/clinica",
+        },
+        {
+          title: "Barbershops & Salons",
+          category: "Bookings & Services",
+          image: salon,
+          path: "/salon",
+        },
+        {
+          title: "Retail & Online Stores",
+          category: "E-commerce",
+          image: tienda,
+          path: "/tienda",
+        },
+        {
+          title: "Gyms",
+          category: "Memberships & Classes",
+          image: gym,
+          path: "/gym",
+        },
+      ],
+    },
+  };
+
+  const t = content[language];
+
   return (
     <section id="portafolio" className="bg-[#111111] py-28 text-white">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#C8A45D]">
-            Portafolio
+            {t.tag}
           </p>
 
           <h2 className="mb-6 text-4xl font-bold md:text-6xl">
-            Proyectos diseñados para vender.
+            {t.title}
           </h2>
 
           <p className="max-w-2xl text-lg leading-8 text-neutral-400">
-            Cada demostración representa una industria distinta y muestra el nivel
-            de diseño, rendimiento y experiencia que desarrolla kaallar.
+            {t.description}
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <Link key={project.title} to={project.path}>
-              <motion.div
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08, duration: 0.45 }}
-                className="group overflow-hidden rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl transition duration-300 hover:border-[#C8A45D]/30"
-              >
-                <div className="relative aspect-[5/4] overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <p className="mb-2 text-sm uppercase tracking-[0.25em] text-[#C8A45D]">
-                    {project.category}
-                  </p>
-
-                  <h3 className="mb-4 text-2xl font-semibold">
-                    {project.title}
-                  </h3>
-
-                  <div className="flex items-center gap-2 font-medium text-white transition group-hover:text-[#C8A45D]">
-                    Explorar proyecto
-                    <ArrowUpRight size={18} />
+          {t.projects.map((project, index) => (
+            <div
+              key={project.title}
+              className={index === 4 ? "md:col-span-2" : ""}
+            >
+              <Link to={project.path}>
+                <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08, duration: 0.45 }}
+                  className="group overflow-hidden rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl transition duration-300 hover:border-[#C8A45D]/30"
+                >
+                  <div className="relative aspect-[5/4] overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
                   </div>
-                </div>
-              </motion.div>
-            </Link>
+
+                  <div className="p-6">
+                    <p className="mb-2 text-sm uppercase tracking-[0.25em] text-[#C8A45D]">
+                      {project.category}
+                    </p>
+
+                    <h3 className="mb-4 text-2xl font-semibold">
+                      {project.title}
+                    </h3>
+
+                    <div className="flex items-center gap-2 font-medium text-white transition group-hover:text-[#C8A45D]">
+                      {t.explore}
+                      <ArrowUpRight size={18} />
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

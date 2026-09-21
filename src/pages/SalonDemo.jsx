@@ -8,7 +8,6 @@ import SalonGallery from "../components/salon/SalonGallery";
 import SalonTestimonials from "../components/salon/SalonTestimonials";
 import SalonWhyUs from "../components/salon/SalonWhyUs";
 import SalonHours from "../components/salon/SalonHours";
-import SalonInstagram from "../components/salon/SalonInstagram";
 import SalonFooter from "../components/salon/SalonFooter";
 import WhatsAppFloat from "../components/salon/WhatsAppFloat";
 
@@ -25,7 +24,6 @@ function SalonDemo() {
       <SalonTestimonials />
       <SalonWhyUs />
       <SalonHours />
-      <SalonInstagram />
       <SalonFooter />
       <WhatsAppFloat />
     </>

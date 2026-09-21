@@ -1,9 +1,9 @@
-function BufeteStats() {
+function GymStats() {
   const stats = [
-    ["15+", "Años de experiencia"],
-    ["98%", "Casos resueltos"],
-    ["500+", "Clientes asesorados"],
-    ["24 h", "Respuesta inicial"],
+    ["2021", "Fundado"],
+    ["4.9★", "Calificación"],
+    ["+2.500", "Miembros activos"],
+    ["100%", "Entrenamiento personalizado"],
   ];
 
   return (
@@ -25,4 +25,4 @@ function BufeteStats() {
   );
 }
 
-export default BufeteStats;
+export default GymStats;

@@ -7,7 +7,6 @@ import TiendaGallery from "../components/tienda/TiendaGallery";
 import TiendaTestimonials from "../components/tienda/TiendaTestimonials";
 import TiendaWhyUs from "../components/tienda/TiendaWhyUs";
 import TiendaHours from "../components/tienda/TiendaHours";
-import TiendaInstagram from "../components/tienda/TiendaInstagram";
 import TiendaFooter from "../components/tienda/TiendaFooter";
 import WhatsAppFloat from "../components/tienda/WhatsAppFloat";
 
@@ -23,7 +22,6 @@ function TiendaDemo() {
       <TiendaTestimonials />
       <TiendaWhyUs />
       <TiendaHours />
-      <TiendaInstagram />
       <TiendaFooter />
       <WhatsAppFloat />
     </>

@@ -1,8 +1,8 @@
 import { Award, Stethoscope } from "lucide-react";
 
-import doctor1 from "../../assets/images/clinica-1.jpg";
-import doctor2 from "../../assets/images/clinica-2.jpg";
-import doctor3 from "../../assets/images/clinica-3.jpg";
+import doctor1 from "../../assets/images/doctor-1.jpg";
+import doctor2 from "../../assets/images/doctor-2.jpg";
+import doctor3 from "../../assets/images/doctor-3.jpg";
 
 const doctors = [
   {

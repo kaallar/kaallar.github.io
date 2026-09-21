@@ -1,42 +1,45 @@
 import { motion } from "framer-motion";
 
-import bufete1 from "../../assets/images/bufete-1.jpg";
-import bufete2 from "../../assets/images/bufete-2.jpg";
-import bufete3 from "../../assets/images/bufete-3.jpg";
-import bufete4 from "../../assets/images/bufete-4.jpg";
-import bufete5 from "../../assets/images/bufete-5.jpg";
+import gymAbout from "../../assets/images/gym-about.jpg";
+import gallery1 from "../../assets/images/gym-gallery-1.jpg";
+import gallery2 from "../../assets/images/gym-gallery-2.jpg";
+import gallery3 from "../../assets/images/gym-gallery-3.jpg";
+import gallery4 from "../../assets/images/gym-gallery-4.jpg";
+import gallery5 from "../../assets/images/gym-gallery-5.jpg";
+
 
 const images = [
-  { src: bufete1, title: "Recepción Ejecutiva", large: true },
-  { src: bufete2, title: "Asesoría Personalizada", large: false },
-  { src: bufete3, title: "Sala de Juntas", large: false },
-  { src: bufete4, title: "Biblioteca Jurídica", large: true },
-  { src: bufete5, title: "Atención Corporativa", large: false },
+  { src: gymAbout, title: "Zona de entrenamiento", large: true },
+  { src: gallery1, title: "Área de pesas", large: false },
+  { src: gallery2, title: "Entrenamiento funcional", large: false },
+  { src: gallery3, title: "Cardio premium", large: true },
+  { src: gallery4, title: "Zona de recuperación", large: false },
+  { src: gallery5, title: "Espacios diseñados para rendir", large: false },
 ];
 
-function BufeteGallery() {
+function GymGallery() {
   return (
     <section id="galeria" className="bg-white py-24 text-black">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#C8A45D]">
-            Nuestras instalaciones
+            Galería
           </p>
 
           <h2 className="mb-5 text-5xl font-bold">
-            Un entorno que transmite confianza.
+            Un gimnasio pensado para entrenar al máximo.
           </h2>
 
           <p className="max-w-2xl text-lg leading-8 text-neutral-600">
-            Espacios diseñados para brindar privacidad, profesionalismo y una
-            atención jurídica de alto nivel en cada consulta.
+            Equipamiento moderno, zonas funcionales y un ambiente diseñado para
+            ofrecer una experiencia fitness profesional.
           </p>
         </div>
 
         <div className="grid auto-rows-[220px] gap-5 md:grid-cols-2">
           {images.map((image, index) => (
             <motion.div
-              key={index}
+              key={image.title}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -51,11 +54,11 @@ function BufeteGallery() {
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
               <div className="absolute bottom-0 p-6">
                 <p className="text-xs uppercase tracking-[0.25em] text-[#C8A45D]">
-                  Bufete Atlas
+                  NEXUS Fitness Club
                 </p>
 
                 <h3 className="mt-2 text-2xl font-semibold text-white">
@@ -70,4 +73,4 @@ function BufeteGallery() {
   );
 }
 
-export default BufeteGallery;
+export default GymGallery;
