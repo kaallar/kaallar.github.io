@@ -24,7 +24,7 @@ function Services({ language = "es" }) {
         "Cada sitio está diseñado específicamente para tu negocio, con una experiencia elegante, rápida y totalmente personalizable.",
       items: [
         {
-          title: "Restaurantes y cafeterías",
+          title: "Gastronomía y Hospitalidad",
           description:
             "Menú digital, reservas, galería, Google Maps y WhatsApp.",
           price: "Desde ₡80.000",
@@ -40,7 +40,7 @@ function Services({ language = "es" }) {
           href: "/salon",
         },
         {
-          title: "Clínicas",
+          title: "Clínicas, Consultorios y Bufetes",
           description:
             "Tratamientos, especialistas, testimonios y agenda de citas.",
           price: "Desde ₡140.000",
@@ -48,7 +48,7 @@ function Services({ language = "es" }) {
           href: "/clinica",
         },
         {
-          title: "Gimnasios",
+          title: "Centros de Entrenamiento",
           description:
             "Membresías, clases, entrenadores y planes personalizados.",
           price: "Desde ₡140.000",
@@ -56,7 +56,7 @@ function Services({ language = "es" }) {
           href: "/gym",
         },
         {
-          title: "Comercios y tiendas",
+          title: "Comercio minorista y tiendas especializadas",
           description:
             "Catálogo de productos, carrito de compras, pagos en línea y panel administrativo.",
           price: "Desde ₡250.000",

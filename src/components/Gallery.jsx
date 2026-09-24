@@ -18,13 +18,13 @@ function Gallery({ language = "es" }) {
       explore: "Explorar proyecto",
       projects: [
         {
-          title: "Restaurantes y cafeterías",
+          title: "Gastronomía y Hospitalidad",
           category: "Landing & multipágina",
           image: cafe,
           path: "/cafe",
         },
         {
-          title: "Clínicas",
+          title: "Clínicas, Consultorios y Bufetes",
           category: "Sitio corporativo",
           image: clinica,
           path: "/clinica",
@@ -36,13 +36,13 @@ function Gallery({ language = "es" }) {
           path: "/salon",
         },
         {
-          title: "Comercios y tiendas",
+          title: "Comercio minorista y tiendas especializadas",
           category: "E-commerce",
           image: tienda,
           path: "/tienda",
         },
         {
-          title: "Gimnasios",
+          title: "Centros de Entrenamiento",
           category: "Membresías & clases",
           image: gym,
           path: "/gym",

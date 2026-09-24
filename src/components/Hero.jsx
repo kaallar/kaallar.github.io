@@ -22,7 +22,7 @@ function Hero({ language = "es" }) {
       highlight: "impulsan",
       line2: "tu negocio.",
       description:
-        "Diseñamos experiencias digitales premium para restaurantes, clínicas, barberías, comercios, gimnasios y cualquier negocio que busque una presencia elegante y profesional.",
+        "Diseñamos experiencias digitales premium para restaurantes, Clínicas, Consultorios y Bufetes, barberías, comercios, Centros de Entrenamiento y cualquier negocio que busque una presencia elegante y profesional.",
       plans: "Ver planes",
       portfolio: "Nuestro portafolio",
       online: "Online",
@@ -48,10 +48,10 @@ function Hero({ language = "es" }) {
       ],
       industries: [
         "Restaurantes",
-        "Clínicas",
+        "Clínicas, Consultorios y Bufetes",
         "Barberías",
         "Comercios",
-        "Gimnasios",
+        "Centros de Entrenamiento",
         "Y más",
       ],
     },
