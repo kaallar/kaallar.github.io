@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check, Sparkles, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -132,9 +131,30 @@ function Pricing({ language = "es" }) {
 
   const t = content[language];
 
-  // Growth seleccionado por defecto
+  const sectionRef = useRef(null);
+
+  // Siempre inicia en Growth
   const [active, setActive] = useState("growth");
+
   const plan = t.plans[active];
+
+  // Cuando sales de la sección vuelve automáticamente a Growth
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setActive("growth");
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const openWhatsApp = () => {
     const message = encodeURIComponent(
@@ -151,7 +171,11 @@ function Pricing({ language = "es" }) {
   };
 
   return (
-    <section id="planes" className="bg-[#111111] py-28 text-white">
+    <section
+      id="planes"
+      ref={sectionRef}
+      className="bg-[#111111] py-28 text-white"
+    >
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
         <div className="mb-14 text-center">

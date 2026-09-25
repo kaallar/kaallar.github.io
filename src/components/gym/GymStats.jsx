@@ -1,4 +1,4 @@
-function Fitness & Training Centerstats() {
+function GymStats() {
   const stats = [
     ["2021", "Fundado"],
     ["4.9★", "Calificación"],
@@ -25,4 +25,4 @@ function Fitness & Training Centerstats() {
   );
 }
 
-export default Fitness & Training Centerstats;
+export default GymStats;

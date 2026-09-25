@@ -1,8 +1,8 @@
 import GymNavbar from "../components/gym/GymNavbar";
 import GymHero from "../components/gym/GymHero";
-import Fitness & Training Centerstats from "../components/gym/Fitness & Training Centerstats";
+import GymStats from "../components/gym/GymStats";
 import GymAbout from "../components/gym/GymAbout";
-import Fitness & Training Centerservices from "../components/gym/Fitness & Training Centerservices";
+import GymServices from "../components/gym/GymServices";
 import GymTeam from "../components/gym/GymTeam";
 import GymGallery from "../components/gym/GymGallery";
 import GymTestimonials from "../components/gym/GymTestimonials";
@@ -16,9 +16,9 @@ function GymDemo() {
     <>
       <GymNavbar />
       <GymHero />
-      <Fitness & Training Centerstats />
+      <GymStats />
       <GymAbout />
-      <Fitness & Training Centerservices />
+      <GymServices />
       <GymTeam />
       <GymGallery />
       <GymTestimonials />

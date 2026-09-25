@@ -7,7 +7,7 @@ import {
   HeartPulse,
 } from "lucide-react";
 
-function Fitness & Training Centerservices() {
+function GymServices() {
   const services = [
     {
       name: "Membresía Full Access",
@@ -60,9 +60,9 @@ function Fitness & Training Centerservices() {
           </h2>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-neutral-400">
-            Descubre algunos de los servicios más solicitados de NEXUS Fitness
-            Club, diseñados para ayudarte a alcanzar tus objetivos con
-            acompañamiento profesional.
+            Descubre algunos de los servicios más solicitados de este gimnasio,
+            diseñados para ayudarte a alcanzar tus objetivos con acompañamiento
+            profesional.
           </p>
         </div>
 
@@ -87,9 +87,7 @@ function Fitness & Training Centerservices() {
                   </span>
                 </div>
 
-                <p className="leading-7 text-neutral-400">
-                  {service.desc}
-                </p>
+                <p className="leading-7 text-neutral-400">{service.desc}</p>
               </div>
             );
           })}
@@ -99,4 +97,4 @@ function Fitness & Training Centerservices() {
   );
 }
 
-export default Fitness & Training Centerservices;
+export default GymServices;
