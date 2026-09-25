@@ -7,7 +7,7 @@ import {
   HeartPulse,
 } from "lucide-react";
 
-function GymServices() {
+function Fitness & Training Centerservices() {
   const services = [
     {
       name: "Membresía Full Access",
@@ -99,4 +99,4 @@ function GymServices() {
   );
 }
 
-export default GymServices;
+export default Fitness & Training Centerservices;

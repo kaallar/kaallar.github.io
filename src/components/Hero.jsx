@@ -62,7 +62,7 @@ function Hero({ language = "es" }) {
       highlight: "grow",
       line2: "your business.",
       description:
-        "We design premium digital experiences for restaurants, clinics, barbershops, retail stores, gyms and any business looking for an elegant, professional online presence.",
+        "We design premium digital experiences for restaurants, Clinics, Practices & Law Firms, barbershops, retail stores, Fitness & Training Centers and any business looking for an elegant, professional online presence.",
       plans: "View plans",
       portfolio: "Our portfolio",
       online: "Online",
@@ -88,10 +88,10 @@ function Hero({ language = "es" }) {
       ],
       industries: [
         "Restaurants",
-        "Clinics",
+        "Clinics, Practices & Law Firms",
         "Barbershops",
         "Retail",
-        "Gyms",
+        "Fitness & Training Centers",
         "More",
       ],
     },

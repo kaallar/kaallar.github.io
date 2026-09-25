@@ -58,13 +58,13 @@ function Gallery({ language = "es" }) {
       explore: "Explore project",
       projects: [
         {
-          title: "Restaurants & Cafés",
+          title: "Food & Hospitality",
           category: "Landing & Multi-page",
           image: cafe,
           path: "/cafe",
         },
         {
-          title: "Clinics",
+          title: "Clinics, Practices & Law Firms",
           category: "Corporate Website",
           image: clinica,
           path: "/clinica",
@@ -76,13 +76,13 @@ function Gallery({ language = "es" }) {
           path: "/salon",
         },
         {
-          title: "Retail & Online Stores",
+          title: "Retail & Online Commerce",
           category: "E-commerce",
           image: tienda,
           path: "/tienda",
         },
         {
-          title: "Gyms",
+          title: "Fitness & Training Centers",
           category: "Memberships & Classes",
           image: gym,
           path: "/gym",

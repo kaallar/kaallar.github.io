@@ -83,7 +83,7 @@ function Services({ language = "es" }) {
         "Every website is designed specifically for your business, with an elegant, fast and fully customizable experience.",
       items: [
         {
-          title: "Restaurants & Cafés",
+          title: "Food & Hospitality",
           description:
             "Digital menu, reservations, gallery, Google Maps and WhatsApp.",
           price: "From ₡80,000",
@@ -99,7 +99,7 @@ function Services({ language = "es" }) {
           href: "/salon",
         },
         {
-          title: "Clinics",
+          title: "Clinics, Practices & Law Firms",
           description:
             "Treatments, specialists, testimonials and appointment booking.",
           price: "From ₡140,000",
@@ -107,7 +107,7 @@ function Services({ language = "es" }) {
           href: "/clinica",
         },
         {
-          title: "Gyms",
+          title: "Fitness & Training Centers",
           description:
             "Memberships, classes, coaches and personalized training plans.",
           price: "From ₡140,000",
@@ -115,7 +115,7 @@ function Services({ language = "es" }) {
           href: "/gym",
         },
         {
-          title: "Retail & Online Stores",
+          title: "Retail & Online Commerce",
           description:
             "Product catalog, shopping cart, online payments and admin panel.",
           price: "From ₡250,000",
@@ -125,7 +125,7 @@ function Services({ language = "es" }) {
         {
           title: "And much more",
           description:
-            "Hotels, real estate, veterinary clinics, law firms, academies, medical offices and any business that needs a professional website.",
+            "Hotels, real estate, veterinary Clinics, Practices & Law Firms, law firms, academies, medical offices and any business that needs a professional website.",
           price: "Custom quote",
           image: mas,
           href: whatsapp,
