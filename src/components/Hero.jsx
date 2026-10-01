@@ -48,15 +48,10 @@ function Hero({ language = "es" }) {
       ],
       industries: [
         "Restaurantes",
-        "•",
         "Clínicas, Consultorios y Bufetes",
-        "•",
         "Barberías",
-        "•",
         "Comercios",
-        "•",
         "Centros de Entrenamiento",
-        "•",
         "Y más",
       ],
     },
@@ -93,14 +88,10 @@ function Hero({ language = "es" }) {
       ],
       industries: [
         "Restaurants",
-        "•",
         "Clinics, Practices & Law Firms",
-        "•",
         "Barbershops",
-        "•",
         "Retail",
         "Fitness & Training Centers",
-        "•",
         "More",
       ],
     },
@@ -269,9 +260,18 @@ function Hero({ language = "es" }) {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-6 py-7 text-sm uppercase tracking-[0.2em] text-neutral-400">
-          {t.industries.map((item) => (
-            <span key={item}>{item}</span>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-6 py-7 text-center text-sm uppercase tracking-[0.2em] text-neutral-400">
+          {t.industries.map((item, index) => (
+            <span
+              key={item}
+              className="inline-flex items-center justify-center gap-4"
+            >
+              <span>{item}</span>
+
+              {index < t.industries.length - 1 && (
+                <span className="text-[#C8A45D]">•</span>
+              )}
+            </span>
           ))}
         </div>
       </div>
