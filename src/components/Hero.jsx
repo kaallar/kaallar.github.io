@@ -54,7 +54,6 @@ function Hero({ language = "es" }) {
         "Barberías",
         "•",
         "Comercios",
-        "•",
         "Centros de Entrenamiento",
         "•",
         "Y más",
